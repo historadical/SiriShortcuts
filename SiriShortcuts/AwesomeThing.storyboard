@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Bu-gY-Tuc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Hzj-jW-Lpi">
+            <objects>
+                <viewController id="2Bu-gY-Tuc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iSM-9d-hxn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hello-lehi" translatesAutoresizingMaskIntoConstraints="NO" id="N6Q-Oi-we4">
+                                <rect key="frame" x="16" y="36" width="343" height="615"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ofm-Gj-AcR" firstAttribute="bottom" secondItem="N6Q-Oi-we4" secondAttribute="bottom" constant="16" id="9m1-KB-bx5"/>
+                            <constraint firstItem="Ofm-Gj-AcR" firstAttribute="trailing" secondItem="N6Q-Oi-we4" secondAttribute="trailing" constant="16" id="FSR-3U-BxC"/>
+                            <constraint firstItem="N6Q-Oi-we4" firstAttribute="top" secondItem="Ofm-Gj-AcR" secondAttribute="top" constant="16" id="V7v-BN-Jdd"/>
+                            <constraint firstItem="N6Q-Oi-we4" firstAttribute="leading" secondItem="Ofm-Gj-AcR" secondAttribute="leading" constant="16" id="wGU-nT-5Kr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ofm-Gj-AcR"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aYn-k7-bT9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-47" y="137"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hello-lehi" width="344" height="454"/>
+    </resources>
+</document>
