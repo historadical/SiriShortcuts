@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5BFBC7FCD6FB22D6718BC0E1 /* Pods_SiriShortcutsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5698C4A9AFB353F4C5630EAA /* Pods_SiriShortcutsUITests.framework */; };
 		6665B82F221E5450001C1928 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6665B82E221E5450001C1928 /* AppDelegate.swift */; };
 		6665B831221E5450001C1928 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6665B830221E5450001C1928 /* ViewController.swift */; };
 		6665B834221E5450001C1928 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6665B832221E5450001C1928 /* Main.storyboard */; };
@@ -17,6 +18,10 @@
 		6665B85E221E5F3B001C1928 /* NotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6665B85D221E5F3B001C1928 /* NotificationNameExtension.swift */; };
 		6665B860221E5F5D001C1928 /* SiriShortcutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6665B85F221E5F5D001C1928 /* SiriShortcutManager.swift */; };
 		6665B862221E62F6001C1928 /* AwesomeThing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6665B861221E62F6001C1928 /* AwesomeThing.storyboard */; };
+		A7D49E4B8D10226A9AE1A5ED /* Pods_SiriShortcutsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2041449F63FF476E47F387B2 /* Pods_SiriShortcutsTests.framework */; };
+		D73C13ED8B7FCDE5935EB2F2 /* Pods_SiriShortcuts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A707BF39F7D45C3D4AF68F4F /* Pods_SiriShortcuts.framework */; };
+		FDD8EF95221F4D070083A33B /* AddToSiriViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD8EF94221F4D070083A33B /* AddToSiriViewController.swift */; };
+		FDD8EF97221F4D830083A33B /* AwesomeThingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD8EF96221F4D830083A33B /* AwesomeThingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		035B7F0B5F8D263D0B7A71D7 /* Pods-SiriShortcuts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SiriShortcuts.release.xcconfig"; path = "Target Support Files/Pods-SiriShortcuts/Pods-SiriShortcuts.release.xcconfig"; sourceTree = "<group>"; };
+		2041449F63FF476E47F387B2 /* Pods_SiriShortcutsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SiriShortcutsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		44DB4802DDCF0B4C675F28CA /* Pods-SiriShortcutsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SiriShortcutsUITests.debug.xcconfig"; path = "Target Support Files/Pods-SiriShortcutsUITests/Pods-SiriShortcutsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5698C4A9AFB353F4C5630EAA /* Pods_SiriShortcutsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SiriShortcutsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		625129D5C02EB13EE3C651A5 /* Pods-SiriShortcutsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SiriShortcutsTests.release.xcconfig"; path = "Target Support Files/Pods-SiriShortcutsTests/Pods-SiriShortcutsTests.release.xcconfig"; sourceTree = "<group>"; };
 		6665B82B221E5450001C1928 /* SiriShortcuts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiriShortcuts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6665B82E221E5450001C1928 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6665B830221E5450001C1928 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +63,12 @@
 		6665B85D221E5F3B001C1928 /* NotificationNameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNameExtension.swift; sourceTree = "<group>"; };
 		6665B85F221E5F5D001C1928 /* SiriShortcutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriShortcutManager.swift; sourceTree = "<group>"; };
 		6665B861221E62F6001C1928 /* AwesomeThing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AwesomeThing.storyboard; sourceTree = "<group>"; };
+		A707BF39F7D45C3D4AF68F4F /* Pods_SiriShortcuts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SiriShortcuts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA255FF8BFC618450CD656B8 /* Pods-SiriShortcutsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SiriShortcutsUITests.release.xcconfig"; path = "Target Support Files/Pods-SiriShortcutsUITests/Pods-SiriShortcutsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E92C4F84311C94B8F5B0A0C7 /* Pods-SiriShortcutsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SiriShortcutsTests.debug.xcconfig"; path = "Target Support Files/Pods-SiriShortcutsTests/Pods-SiriShortcutsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F2F25B325FFCEC9994C1EECE /* Pods-SiriShortcuts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SiriShortcuts.debug.xcconfig"; path = "Target Support Files/Pods-SiriShortcuts/Pods-SiriShortcuts.debug.xcconfig"; sourceTree = "<group>"; };
+		FDD8EF94221F4D070083A33B /* AddToSiriViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToSiriViewController.swift; sourceTree = "<group>"; };
+		FDD8EF96221F4D830083A33B /* AwesomeThingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwesomeThingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D73C13ED8B7FCDE5935EB2F2 /* Pods_SiriShortcuts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7D49E4B8D10226A9AE1A5ED /* Pods_SiriShortcutsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +92,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BFBC7FCD6FB22D6718BC0E1 /* Pods_SiriShortcutsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53486F34138AB7BD540E06A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A707BF39F7D45C3D4AF68F4F /* Pods_SiriShortcuts.framework */,
+				2041449F63FF476E47F387B2 /* Pods_SiriShortcutsTests.framework */,
+				5698C4A9AFB353F4C5630EAA /* Pods_SiriShortcutsUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6665B822221E5450001C1928 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +116,8 @@
 				6665B842221E5451001C1928 /* SiriShortcutsTests */,
 				6665B84D221E5451001C1928 /* SiriShortcutsUITests */,
 				6665B82C221E5450001C1928 /* Products */,
+				E9D0F8E957F8410CE9D44CBE /* Pods */,
+				53486F34138AB7BD540E06A6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +136,8 @@
 			children = (
 				6665B82E221E5450001C1928 /* AppDelegate.swift */,
 				6665B830221E5450001C1928 /* ViewController.swift */,
+				FDD8EF96221F4D830083A33B /* AwesomeThingViewController.swift */,
+				FDD8EF94221F4D070083A33B /* AddToSiriViewController.swift */,
 				6665B832221E5450001C1928 /* Main.storyboard */,
 				6665B861221E62F6001C1928 /* AwesomeThing.storyboard */,
 				6665B85F221E5F5D001C1928 /* SiriShortcutManager.swift */,
@@ -142,6 +175,19 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		E9D0F8E957F8410CE9D44CBE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F2F25B325FFCEC9994C1EECE /* Pods-SiriShortcuts.debug.xcconfig */,
+				035B7F0B5F8D263D0B7A71D7 /* Pods-SiriShortcuts.release.xcconfig */,
+				E92C4F84311C94B8F5B0A0C7 /* Pods-SiriShortcutsTests.debug.xcconfig */,
+				625129D5C02EB13EE3C651A5 /* Pods-SiriShortcutsTests.release.xcconfig */,
+				44DB4802DDCF0B4C675F28CA /* Pods-SiriShortcutsUITests.debug.xcconfig */,
+				DA255FF8BFC618450CD656B8 /* Pods-SiriShortcutsUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,9 +195,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6665B853221E5451001C1928 /* Build configuration list for PBXNativeTarget "SiriShortcuts" */;
 			buildPhases = (
+				44D11D096C4BC9B462E3E7BB /* [CP] Check Pods Manifest.lock */,
 				6665B827221E5450001C1928 /* Sources */,
 				6665B828221E5450001C1928 /* Frameworks */,
 				6665B829221E5450001C1928 /* Resources */,
+				7B81378866E2877971D9576E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -166,6 +214,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6665B856221E5451001C1928 /* Build configuration list for PBXNativeTarget "SiriShortcutsTests" */;
 			buildPhases = (
+				6169F031AC580EEE5723BE0B /* [CP] Check Pods Manifest.lock */,
 				6665B83B221E5451001C1928 /* Sources */,
 				6665B83C221E5451001C1928 /* Frameworks */,
 				6665B83D221E5451001C1928 /* Resources */,
@@ -184,6 +233,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6665B859221E5451001C1928 /* Build configuration list for PBXNativeTarget "SiriShortcutsUITests" */;
 			buildPhases = (
+				85295D252238E0846251E235 /* [CP] Check Pods Manifest.lock */,
 				6665B846221E5451001C1928 /* Sources */,
 				6665B847221E5451001C1928 /* Frameworks */,
 				6665B848221E5451001C1928 /* Resources */,
@@ -269,6 +319,97 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		44D11D096C4BC9B462E3E7BB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SiriShortcuts-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6169F031AC580EEE5723BE0B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SiriShortcutsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B81378866E2877971D9576E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SiriShortcuts/Pods-SiriShortcuts-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SAConfettiView/SAConfettiView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SAConfettiView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SiriShortcuts/Pods-SiriShortcuts-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85295D252238E0846251E235 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SiriShortcutsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6665B827221E5450001C1928 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -276,6 +417,8 @@
 			files = (
 				6665B85E221E5F3B001C1928 /* NotificationNameExtension.swift in Sources */,
 				6665B831221E5450001C1928 /* ViewController.swift in Sources */,
+				FDD8EF97221F4D830083A33B /* AwesomeThingViewController.swift in Sources */,
+				FDD8EF95221F4D070083A33B /* AddToSiriViewController.swift in Sources */,
 				6665B860221E5F5D001C1928 /* SiriShortcutManager.swift in Sources */,
 				6665B82F221E5450001C1928 /* AppDelegate.swift in Sources */,
 			);
@@ -450,6 +593,7 @@
 		};
 		6665B854221E5451001C1928 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2F25B325FFCEC9994C1EECE /* Pods-SiriShortcuts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -468,6 +612,7 @@
 		};
 		6665B855221E5451001C1928 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 035B7F0B5F8D263D0B7A71D7 /* Pods-SiriShortcuts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -486,6 +631,7 @@
 		};
 		6665B857221E5451001C1928 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E92C4F84311C94B8F5B0A0C7 /* Pods-SiriShortcutsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -507,6 +653,7 @@
 		};
 		6665B858221E5451001C1928 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 625129D5C02EB13EE3C651A5 /* Pods-SiriShortcutsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -528,6 +675,7 @@
 		};
 		6665B85A221E5451001C1928 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44DB4802DDCF0B4C675F28CA /* Pods-SiriShortcutsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -548,6 +696,7 @@
 		};
 		6665B85B221E5451001C1928 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA255FF8BFC618450CD656B8 /* Pods-SiriShortcutsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

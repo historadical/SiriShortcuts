@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Awesome Thing View Controller-->
         <scene sceneID="Hzj-jW-Lpi">
             <objects>
-                <viewController id="2Bu-gY-Tuc" sceneMemberID="viewController">
+                <viewController id="2Bu-gY-Tuc" customClass="AwesomeThingViewController" customModule="SiriShortcuts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iSM-9d-hxn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -1,0 +1,16 @@
+PODS:
+  - SAConfettiView (0.1.8)
+
+DEPENDENCIES:
+  - SAConfettiView
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SAConfettiView
+
+SPEC CHECKSUMS:
+  SAConfettiView: c87031a2280659261b730fce3669fb10e73636ee
+
+PODFILE CHECKSUM: adbeb430d18a9ed2a52992d3e3fff6538f9ed546
+
+COCOAPODS: 1.6.0
