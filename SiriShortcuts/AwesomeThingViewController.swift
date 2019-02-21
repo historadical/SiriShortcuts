@@ -29,6 +29,15 @@ class AwesomeThingViewController: UIViewController {
         UIView.animate(withDuration: 0.3) {
             confettiView.alpha = 1
         }
+        
+        let displayCount = UserDefaults.standard.integer(forKey: "greetingCount")
+        let hasSeenSiri = UserDefaults.standard.bool(forKey: "hasSeenSiri")
+        if displayCount > 1, (displayCount + 1) % 3 == 0, !hasSeenSiri {
+            guard let addToSiriViewController = UIStoryboard(name: "AddToSiri", bundle: nil).instantiateInitialViewController() else { return }
+            self.present(addToSiriViewController, animated: true, completion: nil)
+        } else if !hasSeenSiri {
+            UserDefaults.standard.set(displayCount + 1, forKey: "greetingCount")
+        }
     }
     
     @objc func dismissView() {

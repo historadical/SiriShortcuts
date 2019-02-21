@@ -18,16 +18,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hello-lehi" translatesAutoresizingMaskIntoConstraints="NO" id="N6Q-Oi-we4">
-                                <rect key="frame" x="16" y="36" width="343" height="615"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="CJo-UD-Xbm">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <string key="text">🎉
+Hello,
+Lehi!</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="999"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Ofm-Gj-AcR" firstAttribute="bottom" secondItem="N6Q-Oi-we4" secondAttribute="bottom" constant="16" id="9m1-KB-bx5"/>
-                            <constraint firstItem="Ofm-Gj-AcR" firstAttribute="trailing" secondItem="N6Q-Oi-we4" secondAttribute="trailing" constant="16" id="FSR-3U-BxC"/>
-                            <constraint firstItem="N6Q-Oi-we4" firstAttribute="top" secondItem="Ofm-Gj-AcR" secondAttribute="top" constant="16" id="V7v-BN-Jdd"/>
-                            <constraint firstItem="N6Q-Oi-we4" firstAttribute="leading" secondItem="Ofm-Gj-AcR" secondAttribute="leading" constant="16" id="wGU-nT-5Kr"/>
+                            <constraint firstItem="CJo-UD-Xbm" firstAttribute="leading" secondItem="Ofm-Gj-AcR" secondAttribute="leading" id="6bt-zt-dfM"/>
+                            <constraint firstItem="Ofm-Gj-AcR" firstAttribute="trailing" secondItem="CJo-UD-Xbm" secondAttribute="trailing" id="RrN-1Y-lKy"/>
+                            <constraint firstItem="Ofm-Gj-AcR" firstAttribute="bottom" secondItem="CJo-UD-Xbm" secondAttribute="bottom" id="hBp-ik-pq8"/>
+                            <constraint firstItem="CJo-UD-Xbm" firstAttribute="top" secondItem="Ofm-Gj-AcR" secondAttribute="top" id="vAB-rk-GdE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ofm-Gj-AcR"/>
                     </view>
@@ -37,7 +43,4 @@
             <point key="canvasLocation" x="-47" y="137"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="hello-lehi" width="344" height="454"/>
-    </resources>
 </document>

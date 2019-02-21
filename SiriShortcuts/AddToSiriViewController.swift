@@ -16,6 +16,8 @@ class AddToSiriViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        UserDefaults.standard.set(UserDefaults.standard.integer(forKey: "greetingCount") + 1, forKey: "greetingCount")
+        
         let addToSiriButton = INUIAddVoiceShortcutButton(style: .blackOutline)
         addToSiriButton.translatesAutoresizingMaskIntoConstraints = false
         
@@ -26,11 +28,14 @@ class AddToSiriViewController: UIViewController {
         addToSiriButton.addTarget(self, action: #selector(self.addToSiri(_:)), for: .touchUpInside)
         
         let notNowButton = UIButton(frame: addToSiriButton.frame)
+        notNowButton.setTitle("Not now", for: .normal)
+        notNowButton.setTitleColor(.black, for: .normal)
         notNowButton.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.addSubview(notNowButton)
         self.view.centerXAnchor.constraint(equalTo: notNowButton.centerXAnchor).isActive = true
-        self.view.centerYAnchor.constraint(equalTo: notNowButton.centerYAnchor, constant: addToSiriButton.frame.height).isActive = true
+        let notNowTopConstraint = NSLayoutConstraint(item: notNowButton, attribute: .top, relatedBy: .equal, toItem: addToSiriButton, attribute: .bottom, multiplier: 1, constant: 16)
+        self.view.addConstraint(notNowTopConstraint)
         
         notNowButton.addTarget(self, action: #selector(self.dismissView), for: .touchUpInside)
     }
@@ -71,11 +76,15 @@ class AddToSiriViewController: UIViewController {
 extension AddToSiriViewController: INUIAddVoiceShortcutViewControllerDelegate {
     func addVoiceShortcutViewController(_ controller: INUIAddVoiceShortcutViewController, didFinishWith voiceShortcut: INVoiceShortcut?, error: Error?) {
         print("Added voice shortcut")
+        UserDefaults.standard.set(true, forKey: "hasSeenSiri")
         controller.dismiss(animated: true, completion: nil)
+        self.dismissView()
     }
     
     func addVoiceShortcutViewControllerDidCancel(_ controller: INUIAddVoiceShortcutViewController) {
         print("Cancelled voice shortcut")
+        UserDefaults.standard.set(true, forKey: "hasSeenSiri")
         controller.dismiss(animated: true, completion: nil)
+        self.dismissView()
     }
 }

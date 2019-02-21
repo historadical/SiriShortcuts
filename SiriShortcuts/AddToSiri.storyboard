@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SiG-GO-xLD">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add To Siri View Controller-->
+        <scene sceneID="2zI-OJ-6xe">
+            <objects>
+                <viewController id="SiG-GO-xLD" customClass="AddToSiriViewController" customModule="SiriShortcuts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E5a-fb-qoA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6vJ-bf-SIP">
+                                <rect key="frame" x="16" y="36" width="343" height="167"/>
+                                <string key="text">Psst...
+You can add this to Siri to make it easier in the future!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6vJ-bf-SIP" firstAttribute="top" secondItem="Q88-zi-oMw" secondAttribute="top" constant="16" id="GU4-7q-PV5"/>
+                            <constraint firstItem="Q88-zi-oMw" firstAttribute="trailing" secondItem="6vJ-bf-SIP" secondAttribute="trailing" constant="16" id="cM7-iN-DFu"/>
+                            <constraint firstItem="6vJ-bf-SIP" firstAttribute="height" secondItem="E5a-fb-qoA" secondAttribute="height" multiplier="1/4" id="eiL-Zn-Tq6"/>
+                            <constraint firstItem="6vJ-bf-SIP" firstAttribute="leading" secondItem="Q88-zi-oMw" secondAttribute="leading" constant="16" id="oho-wq-u0R"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Q88-zi-oMw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SKN-D0-Do8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="165.59999999999999" y="172.26386806596702"/>
+        </scene>
+    </scenes>
+</document>
