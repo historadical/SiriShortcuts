@@ -14,15 +14,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         NotificationCenter.default.addObserver(self, selector: #selector(sayHello), name: .SiriShortcutReceived, object: nil)
+
+        let userActivity = NSUserActivity(activityType: "tech.gaire.siri-shortcuts.awesome-thing")
+        userActivity.isEligibleForSearch = true
+        userActivity.isEligibleForPrediction = true
+        self.userActivity = userActivity
     }
 
     @IBAction func sayHiButtonTapped(_ sender: Any) {
         self.sayHello()
     }
 
-    @objc
-    func sayHello() {
-        print("did an awesome thing!")
+    @objc func sayHello() {
         guard let awesomeThingViewController = UIStoryboard(name: "AwesomeThing", bundle: nil).instantiateInitialViewController() else { return }
         self.present(awesomeThingViewController, animated: true, completion: nil)
     }
