@@ -42,8 +42,7 @@ class AddToSiriViewController: UIViewController {
     
     // Present the Add Shortcut view controller after the
     // user taps the "Add to Siri" button.
-    @objc
-    func addToSiri(_ sender: Any) {
+    @objc func addToSiri(_ sender: Any) {
         let userActivity = NSUserActivity(activityType: "tech.gaire.siri-shortcuts.awesome-thing")
         
         userActivity.isEligibleForSearch = true
