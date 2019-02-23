@@ -31,7 +31,7 @@ class AwesomeThingViewController: UIViewController {
         }
         
         let displayCount = UserDefaults.standard.integer(forKey: "greetingCount")
-        let hasSeenSiri = UserDefaults.standard.bool(forKey: "hasSeenSiri")
+        let hasSeenSiri = UserDefaults.standard.bool(forKey: "hasSetSiriShortcut")
         if displayCount > 1, (displayCount + 1) % 3 == 0, !hasSeenSiri {
             guard let addToSiriViewController = UIStoryboard(name: "AddToSiri", bundle: nil).instantiateInitialViewController() else { return }
             self.present(addToSiriViewController, animated: true, completion: nil)

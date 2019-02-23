@@ -13,6 +13,8 @@ import MobileCoreServices
 
 class AddToSiriViewController: UIViewController {
 
+    let awesomeThingUserActivity = NSUserActivity(activityType: "tech.gaire.siri-shortcuts.awesome-thing")
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,29 +41,31 @@ class AddToSiriViewController: UIViewController {
         
         notNowButton.addTarget(self, action: #selector(self.dismissView), for: .touchUpInside)
     }
-    
-    // Present the Add Shortcut view controller after the
-    // user taps the "Add to Siri" button.
-    @objc func addToSiri(_ sender: Any) {
-        let userActivity = NSUserActivity(activityType: "tech.gaire.siri-shortcuts.awesome-thing")
-        
-        userActivity.isEligibleForSearch = true
-        userActivity.isEligibleForPrediction = true
-        
-        userActivity.title = "Do Awesome Thing"
-        userActivity.suggestedInvocationPhrase = "Do the awesome thing"
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        self.awesomeThingUserActivity.isEligibleForSearch = true
+        self.awesomeThingUserActivity.isEligibleForPrediction = true
+
+        self.awesomeThingUserActivity.title = "Do Awesome Thing"
+        self.awesomeThingUserActivity.suggestedInvocationPhrase = "Do the awesome thing"
         let attributes = CSSearchableItemAttributeSet(itemContentType: kUTTypeItem as String)
         attributes.contentDescription = "Siri can do the awesome thing for you!"
         attributes.thumbnailData = UIImage(named: "awesome-thing")?.pngData()
-        
-        userActivity.contentAttributeSet = attributes
-        
+
+        self.awesomeThingUserActivity.contentAttributeSet = attributes
+
         self.userActivity = userActivity
-        
-        let shortcut = INShortcut(userActivity: userActivity)
-        INVoiceShortcutCenter.shared.setShortcutSuggestions([shortcut])
-        
-        let viewController = INUIAddVoiceShortcutViewController(shortcut: shortcut)
+
+        INVoiceShortcutCenter.shared.setShortcutSuggestions([INShortcut(userActivity: self.awesomeThingUserActivity)])
+    }
+
+    // Present the Add Shortcut view controller after the
+    // user taps the "Add to Siri" button.
+    @objc func addToSiri(_ sender: Any) {
+
+        let viewController = INUIAddVoiceShortcutViewController(shortcut: INShortcut(userActivity: self.awesomeThingUserActivity))
         viewController.modalPresentationStyle = .formSheet
         viewController.delegate = self // Object conforming to `INUIAddVoiceShortcutViewControllerDelegate`.
         present(viewController, animated: true, completion: nil)
@@ -74,15 +78,12 @@ class AddToSiriViewController: UIViewController {
 
 extension AddToSiriViewController: INUIAddVoiceShortcutViewControllerDelegate {
     func addVoiceShortcutViewController(_ controller: INUIAddVoiceShortcutViewController, didFinishWith voiceShortcut: INVoiceShortcut?, error: Error?) {
-        print("Added voice shortcut")
-        UserDefaults.standard.set(true, forKey: "hasSeenSiri")
+        UserDefaults.standard.set(true, forKey: "hasSetSiriShortcut")
         controller.dismiss(animated: true, completion: nil)
         self.dismissView()
     }
     
     func addVoiceShortcutViewControllerDidCancel(_ controller: INUIAddVoiceShortcutViewController) {
-        print("Cancelled voice shortcut")
-        UserDefaults.standard.set(true, forKey: "hasSeenSiri")
         controller.dismiss(animated: true, completion: nil)
         self.dismissView()
     }
