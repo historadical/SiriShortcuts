@@ -14,11 +14,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         NotificationCenter.default.addObserver(self, selector: #selector(sayHello), name: .SiriShortcutReceived, object: nil)
-
-        let userActivity = NSUserActivity(activityType: "tech.gaire.siri-shortcuts.awesome-thing")
-        userActivity.isEligibleForSearch = true
-        userActivity.isEligibleForPrediction = true
-        self.userActivity = userActivity
+        if !UserDefaults.standard.bool(forKey: "hasCreatedActivity") {
+            self.createUserActivity()
+        }
     }
 
     @IBAction func sayHiButtonTapped(_ sender: Any) {
@@ -28,5 +26,14 @@ class ViewController: UIViewController {
     @objc func sayHello() {
         guard let awesomeThingViewController = UIStoryboard(name: "AwesomeThing", bundle: nil).instantiateInitialViewController() else { return }
         self.present(awesomeThingViewController, animated: true, completion: nil)
+    }
+
+    private func createUserActivity() {
+        let userActivity = NSUserActivity(activityType: "tech.gaire.siri-shortcuts.awesome-thing")
+        userActivity.isEligibleForSearch = true
+        userActivity.isEligibleForPrediction = true
+        userActivity.title = "Awesome Thing"
+        self.userActivity = userActivity
+        UserDefaults.standard.set(true, forKey: "hasCreatedActivity")
     }
 }
