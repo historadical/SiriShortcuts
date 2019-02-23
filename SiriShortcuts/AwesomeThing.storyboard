@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="CJo-UD-Xbm">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="16" y="20" width="343" height="647"/>
                                 <string key="text">🎉
 Hello,
-Lehi!</string>
+Tokyo!</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="999"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -30,8 +30,8 @@ Lehi!</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="CJo-UD-Xbm" firstAttribute="leading" secondItem="Ofm-Gj-AcR" secondAttribute="leading" id="6bt-zt-dfM"/>
-                            <constraint firstItem="Ofm-Gj-AcR" firstAttribute="trailing" secondItem="CJo-UD-Xbm" secondAttribute="trailing" id="RrN-1Y-lKy"/>
+                            <constraint firstItem="CJo-UD-Xbm" firstAttribute="leading" secondItem="Ofm-Gj-AcR" secondAttribute="leading" constant="16" id="6bt-zt-dfM"/>
+                            <constraint firstItem="Ofm-Gj-AcR" firstAttribute="trailing" secondItem="CJo-UD-Xbm" secondAttribute="trailing" constant="16" id="RrN-1Y-lKy"/>
                             <constraint firstItem="Ofm-Gj-AcR" firstAttribute="bottom" secondItem="CJo-UD-Xbm" secondAttribute="bottom" id="hBp-ik-pq8"/>
                             <constraint firstItem="CJo-UD-Xbm" firstAttribute="top" secondItem="Ofm-Gj-AcR" secondAttribute="top" id="vAB-rk-GdE"/>
                         </constraints>
