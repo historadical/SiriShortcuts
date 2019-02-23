@@ -20,8 +20,7 @@ class ViewController: UIViewController {
         self.sayHello()
     }
 
-    @objc
-    func sayHello() {
+    @objc func sayHello() {
         print("did an awesome thing!")
         guard let awesomeThingViewController = UIStoryboard(name: "AwesomeThing", bundle: nil).instantiateInitialViewController() else { return }
         self.present(awesomeThingViewController, animated: true, completion: nil)

@@ -18,6 +18,4 @@ class SiriShortcutManager {
             NotificationCenter.default.post(Notification(name: .SiriShortcutReceived))
         }
     }
-
-    
 }
