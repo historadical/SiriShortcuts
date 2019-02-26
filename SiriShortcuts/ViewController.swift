@@ -21,7 +21,9 @@ class ViewController: UIViewController {
     }
 
     @objc func sayHello() {
-        guard let awesomeThingViewController = UIStoryboard(name: "AwesomeThing", bundle: nil).instantiateInitialViewController() else { return }
+        guard SiriShortcutManager.shared.intent == "awesome-thing" || SiriShortcutManager.shared.intent == nil,
+        let awesomeThingViewController = UIStoryboard(name: "AwesomeThing", bundle: nil).instantiateInitialViewController() else { return }
+        SiriShortcutManager.shared.intent = nil
         self.present(awesomeThingViewController, animated: true, completion: nil)
     }
 }
