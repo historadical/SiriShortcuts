@@ -63,7 +63,7 @@ class AddToSiriViewController: UIViewController {
         
         let viewController = INUIAddVoiceShortcutViewController(shortcut: shortcut)
         viewController.modalPresentationStyle = .formSheet
-        viewController.delegate = self // Object conforming to `INUIAddVoiceShortcutViewControllerDelegate`.
+        viewController.delegate = self // self conforming to INUIAddVoiceShortcutViewControllerDelegate.
         present(viewController, animated: true, completion: nil)
     }
     
