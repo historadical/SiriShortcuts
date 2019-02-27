@@ -13,8 +13,6 @@ import MobileCoreServices
 
 class AddToSiriViewController: UIViewController {
 
-    let awesomeThingUserActivity = NSUserActivity(activityType: "tech.gaire.siri-shortcuts.awesome-thing")
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,30 +40,28 @@ class AddToSiriViewController: UIViewController {
         notNowButton.addTarget(self, action: #selector(self.dismissView), for: .touchUpInside)
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        self.awesomeThingUserActivity.isEligibleForSearch = true
-        self.awesomeThingUserActivity.isEligibleForPrediction = true
-
-        self.awesomeThingUserActivity.title = "Do Awesome Thing"
-        self.awesomeThingUserActivity.suggestedInvocationPhrase = "Do the awesome thing"
-        let attributes = CSSearchableItemAttributeSet(itemContentType: kUTTypeItem as String)
-        attributes.contentDescription = "Siri can do the awesome thing for you!"
-        attributes.thumbnailData = UIImage(named: "awesome-thing")?.pngData()
-
-        self.awesomeThingUserActivity.contentAttributeSet = attributes
-
-        self.userActivity = userActivity
-
-        INVoiceShortcutCenter.shared.setShortcutSuggestions([INShortcut(userActivity: self.awesomeThingUserActivity)])
-    }
-
     // Present the Add Shortcut view controller after the
     // user taps the "Add to Siri" button.
     @objc func addToSiri(_ sender: Any) {
-
-        let viewController = INUIAddVoiceShortcutViewController(shortcut: INShortcut(userActivity: self.awesomeThingUserActivity))
+        let userActivity = NSUserActivity(activityType: "tech.gaire.siri-shortcuts.awesome-thing")
+        
+        userActivity.isEligibleForSearch = true
+        userActivity.isEligibleForPrediction = true
+        
+        userActivity.title = "Do Awesome Thing"
+        userActivity.suggestedInvocationPhrase = "Do the awesome thing"
+        let attributes = CSSearchableItemAttributeSet(itemContentType: kUTTypeItem as String)
+        attributes.contentDescription = "Siri can do the awesome thing for you!"
+        attributes.thumbnailData = UIImage(named: "awesome-thing")?.pngData()
+        
+        userActivity.contentAttributeSet = attributes
+        
+        self.userActivity = userActivity
+        
+        let shortcut = INShortcut(userActivity: userActivity)
+        INVoiceShortcutCenter.shared.setShortcutSuggestions([shortcut])
+        
+        let viewController = INUIAddVoiceShortcutViewController(shortcut: shortcut)
         viewController.modalPresentationStyle = .formSheet
         viewController.delegate = self // Object conforming to `INUIAddVoiceShortcutViewControllerDelegate`.
         present(viewController, animated: true, completion: nil)
