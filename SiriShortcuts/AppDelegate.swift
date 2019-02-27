@@ -15,8 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         if #available(iOS 12.0, *),
-            let dictionary:NSDictionary = launchOptions?[.userActivityDictionary] as? NSDictionary,
-            let userActivity = dictionary["UIApplicationLaunchOptionsUserActivityKey"] as? NSUserActivity,
+            let userActivity = launchOptions?[.userActivityDictionary] as? NSUserActivity,
             let intent = userActivity.activityType.components(separatedBy: ".").last {
             SiriShortcutManager.shared.intent = intent
         }
