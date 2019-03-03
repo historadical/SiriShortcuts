@@ -29,11 +29,13 @@ class ViewController: UIViewController {
     }
 
     private func createUserActivity() {
-        let userActivity = NSUserActivity(activityType: "tech.gaire.siri-shortcuts.awesome-thing")
-        userActivity.isEligibleForSearch = true
-        userActivity.isEligibleForPrediction = true
-        userActivity.title = "Awesome Thing"
-        self.userActivity = userActivity
-        UserDefaults.standard.set(true, forKey: "hasCreatedActivity")
+        NSUserActivity.deleteAllSavedUserActivities {
+            let userActivity = NSUserActivity(activityType: "tech.gaire.siri-shortcuts.\(UUID().uuidString)")
+            userActivity.title = "Awesome Thing" // Always localize user-facing strings!
+            userActivity.isEligibleForSearch = true
+            userActivity.isEligibleForPrediction = true
+            self.userActivity = userActivity
+            UserDefaults.standard.set(true, forKey: "hasCreatedActivity")
+        }
     }
 }
