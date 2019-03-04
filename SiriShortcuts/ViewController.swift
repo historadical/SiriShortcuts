@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let uuid = UUID().uuidString.components(separatedBy: "-").last!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,12 +32,12 @@ class ViewController: UIViewController {
 
     private func createUserActivity() {
         NSUserActivity.deleteAllSavedUserActivities {
-            let userActivity = NSUserActivity(activityType: "tech.gaire.siri-shortcuts.\(UUID().uuidString)")
-            userActivity.title = "Awesome Thing" // Always localize user-facing strings!
+            let userActivity = NSUserActivity(activityType: "tech.gaire.siri-shortcuts.\(self.uuid)")
+            userActivity.title = "Awesome Thing: \(self.uuid)" // Always localize user-facing strings!
+            
             userActivity.isEligibleForSearch = true
             userActivity.isEligibleForPrediction = true
             self.userActivity = userActivity
-            UserDefaults.standard.set(true, forKey: "hasCreatedActivity")
         }
     }
 }
