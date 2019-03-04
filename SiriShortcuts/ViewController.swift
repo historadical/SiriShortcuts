@@ -26,7 +26,7 @@ class ViewController: UIViewController {
             self.createUserActivity()
         }
 
-        let addToSiriButton = INUIAddVoiceShortcutButton(style: .whiteOutline)
+        let addToSiriButton = INUIAddVoiceShortcutButton(style: .blackOutline)
         addToSiriButton.translatesAutoresizingMaskIntoConstraints = false
 
         self.view.addSubview(addToSiriButton)
