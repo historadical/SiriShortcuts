@@ -26,9 +26,7 @@ class ViewController: UIViewController {
             self.createUserActivity()
         }
 
-
-
-        let addToSiriButton = INUIAddVoiceShortcutButton(style: .blackOutline)
+        let addToSiriButton = INUIAddVoiceShortcutButton(style: .whiteOutline)
         addToSiriButton.translatesAutoresizingMaskIntoConstraints = false
 
         self.view.addSubview(addToSiriButton)
@@ -36,6 +34,12 @@ class ViewController: UIViewController {
         self.view.centerYAnchor.constraint(equalTo: addToSiriButton.centerYAnchor).isActive = true
 
         addToSiriButton.addTarget(self, action: #selector(self.addToSiri(_:)), for: .touchUpInside)
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+
+        NotificationCenter.default.removeObserver(self)
     }
 
     @IBAction func sayHiButtonTapped(_ sender: Any) {
@@ -73,6 +77,7 @@ class ViewController: UIViewController {
             self.myUserActivity.contentAttributeSet = attributes
 
             self.userActivity = self.myUserActivity
+            UserDefaults.standard.set(true, forKey: "hasCreatedActivity")
         }
     }
 }
