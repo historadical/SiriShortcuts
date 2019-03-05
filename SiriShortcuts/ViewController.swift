@@ -36,12 +36,6 @@ class ViewController: UIViewController {
         addToSiriButton.addTarget(self, action: #selector(self.addToSiri(_:)), for: .touchUpInside)
     }
 
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-
-        NotificationCenter.default.removeObserver(self)
-    }
-
     @IBAction func sayHiButtonTapped(_ sender: Any) {
         self.sayHello()
     }
