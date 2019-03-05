@@ -15,7 +15,7 @@ import CoreServices
 class ViewController: UIViewController {
 
     let myUserActivity: NSUserActivity = {
-        return NSUserActivity(activityType: "tech.gaire.siri-shortcuts.\(UUID().uuidString.components(separatedBy: "-").last!)")
+        return NSUserActivity(activityType: "tech.gaire.siri-shortcuts.awesome-thing")
     }()
 
     override func viewDidLoad() {
@@ -47,7 +47,8 @@ class ViewController: UIViewController {
     }
 
     @objc func sayHello() {
-        guard let awesomeThingViewController = UIStoryboard(name: "AwesomeThing", bundle: nil).instantiateInitialViewController() else { return }
+        guard SiriShortcutManager.shared.intent == "tech.gaire.siri-shortcuts.awesome-thing",
+            let awesomeThingViewController = UIStoryboard(name: "AwesomeThing", bundle: nil).instantiateInitialViewController() else { return }
         self.present(awesomeThingViewController, animated: true, completion: nil)
     }
 
