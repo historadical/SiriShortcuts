@@ -62,24 +62,21 @@ class ViewController: UIViewController {
     }
 
     private func createUserActivity() {
-        NSUserActivity.deleteAllSavedUserActivities {
+        self.myUserActivity.title = "Awesome Thing" // Always localize user-facing strings!
 
-            self.myUserActivity.title = "Awesome Thing" // Always localize user-facing strings!
+        self.myUserActivity.suggestedInvocationPhrase = "Get awesome"
 
-            self.myUserActivity.suggestedInvocationPhrase = "Get awesome"
+        self.myUserActivity.isEligibleForSearch = true
+        self.myUserActivity.isEligibleForPrediction = true
 
-            self.myUserActivity.isEligibleForSearch = true
-            self.myUserActivity.isEligibleForPrediction = true
+        let attributes = CSSearchableItemAttributeSet(itemContentType: kUTTypeItem as String)
+        attributes.contentDescription = "Siri can do the awesome thing for you!"
 
-            let attributes = CSSearchableItemAttributeSet(itemContentType: kUTTypeItem as String)
-            attributes.contentDescription = "Siri can do the awesome thing for you!"
+        attributes.thumbnailData = UIImage(named: "awesome-thing")?.pngData()
+        self.myUserActivity.contentAttributeSet = attributes
 
-            attributes.thumbnailData = UIImage(named: "awesome-thing")?.pngData()
-            self.myUserActivity.contentAttributeSet = attributes
-
-            self.userActivity = self.myUserActivity
-            UserDefaults.standard.set(true, forKey: "hasCreatedActivity")
-        }
+        self.userActivity = self.myUserActivity
+        UserDefaults.standard.set(true, forKey: "hasCreatedActivity")
     }
 }
 
